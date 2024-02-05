@@ -4,7 +4,7 @@ DELETE FROM users;
 ALTER SEQUENCE global_seq RESTART WITH 100000;
 
 INSERT INTO users (name, email, password, calories_per_day)
-VALUES ('User', 'user@yandex.ru', '{noop}password', 2005),
+VALUES ('User', 'user@gmail.com', '{noop}password', 2005),
        ('Admin', 'admin@gmail.com', '{noop}admin', 1900),
        ('Guest', 'guest@gmail.com', '{noop}guest', 2000);
 

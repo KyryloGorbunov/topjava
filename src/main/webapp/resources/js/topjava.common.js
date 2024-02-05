@@ -3,7 +3,7 @@ let form;
 function makeEditable(datatableOpts) {
     ctx.datatableApi = $("#datatable").DataTable(
         {
-            ...datatableOpts, // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+            ...datatableOpts, // https://developer.mozilla.org//docs/Web/JavaScript/Reference/Operators/Spread_syntax
             "ajax": {
                 "url": ctx.ajaxUrl,
                 "dataSrc": ""

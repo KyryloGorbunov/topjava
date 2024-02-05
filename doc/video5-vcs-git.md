@@ -133,7 +133,7 @@ Git вы можете разобраться, кто внес изменения
 
 ### Дополнительные материалы
 
-Для изучения Git рекомендуем в первую очередь ознакомиться со статьями на сайте [topjava.ru](https://topjava.ru):
+Для изучения Git рекомендуем в первую очередь ознакомиться со статьями на сайте [topjava.com](https://topjava.ru):
 
 * [Введение в Git и GitHub: установка и настройка](https://topjava.ru/blog/vvedeniye-v-git-github-ustanovka-i-nastroyka)
 * [Введение в Git и GitHub: базовые команды](https://topjava.ru/blog/vvedeniye-v-git-github-bazovyye-komandy)

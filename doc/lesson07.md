@@ -246,8 +246,8 @@ JUnit предоставляет нам набор коллбэков — инт
 
 #### Apply 7_11_rest_controller.patch
 
-- <a href="http://spring-projects.ru/understanding/rest/">Понимание REST</a>
-- <a href="https://ru.wikipedia.org/wiki/JSON">JSON (JavaScript Object Notation)</a>
+- <a href="http://spring-projects.com/understanding/rest/">Понимание REST</a>
+- <a href="https://com.wikipedia.org/wiki/JSON">JSON (JavaScript Object Notation)</a>
 - [15 тривиальных фактов о правильной работе с протоколом HTTP](https://habrahabr.ru/company/yandex/blog/265569/)
 - [10 Best Practices for Better RESTful](https://medium.com/@mwaysolutions/10-best-practices-for-better-restful-api-cbe81b06f291)
 - [Best practices for rest nested resources](https://stackoverflow.com/questions/20951419/what-are-best-practices-for-rest-nested-resources)
@@ -257,8 +257,8 @@ JUnit предоставляет нам набор коллбэков — инт
 - Дополнительно:
     - [Подборка практик REST](https://gist.github.com/Londeren/838c8a223b92aa4017d3734d663a0ba3)
     - <a href="http://www.infoq.com/articles/springmvc_jsx-rs">JAX-RS vs Spring MVC</a>
-    - <a href="http://habrahabr.ru/post/144011/">RESTful API для сервера – делаем правильно (Часть 1)</a>
-    - <a href="http://habrahabr.ru/post/144259/">RESTful API для сервера – делаем правильно (Часть 2)</a>
+    - <a href="http://habrahabr.com/post/144011/">RESTful API для сервера – делаем правильно (Часть 1)</a>
+    - <a href="http://habrahabr.com/post/144259/">RESTful API для сервера – делаем правильно (Часть 2)</a>
     - <a href="https://www.youtube.com/watch?v=Q84xT4Zd7vs&list=PLoij6udfBncivGZAwS2yQaFGWz4O7oH48">И. Головач.
       RestAPI</a>
     - [value/name в аннотациях @PathVariable и @RequestParam](https://habr.com/ru/post/440214/)
@@ -351,9 +351,11 @@ Spring и расположен в контейнере зависимостей.
 метод, который будет возвращать его экземпляр. Теперь `JsonUtil` сможет его получить.  
 И нам нужно указать Spring, чтобы он не создавал второй экземпляр этого объекта, а клал в свой контекст существующий. 
 Для этого в конфигурации `spring-mvc.xml` определим factory-метод, с помощью которого Spring должен
-получить экземпляр (instance) этого класса:  
+получить экземпляр (instance) этого класса:
+
 ```xml
-<bean class="ru.javawebinar.topjava.web.json.JacksonObjectMapper" id="objectMapper" factory-method="getMapper"/>
+
+<bean class="com.javawebinar.topjava.web.json.JacksonObjectMapper" id="objectMapper" factory-method="getMapper"/>
 ```  
 а в конфигурации `message-converter` вместо создания бина просто сошлемся на сконфигурированный `objectMapper`.  
 
@@ -495,7 +497,7 @@ hamcrest-all используется в проверках `RootControllerTest`
 > Где-то слышал, что любой ресурс по REST должен однозначно идентифицироваться через url без параметров. Правильно ли задавать URL для фильтрации в виде `http://localhost/topjava/rest/meals/filter/{startDate}/{startTime}/{endDate}/{endTime}` ?
 
 Так делают только при
-отношении <a href="https://ru.wikipedia.org/wiki/Диаграмма_классов#.D0.90.D0.B3.D1.80.D0.B5.D0.B3.D0.B0.D1.86.D0.B8.D1.8F">
+отношении <a href="https://com.wikipedia.org/wiki/Диаграмма_классов#.D0.90.D0.B3.D1.80.D0.B5.D0.B3.D0.B0.D1.86.D0.B8.D1.8F">
 агрегация</a>, например, если давать админу право смотреть еду любого юзера, URL мог бы быть похож
 на `http://localhost/topjava/rest/users/{userId}/meals/{mealId}` (не рекомендуется, см. ссылку ниже). В случае критериев
 поиска или страничных данных они передаются как параметр. Смотри также:
@@ -552,7 +554,7 @@ hamcrest-all используется в проверках `RootControllerTest`
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Типичные ошибки и подсказки по реализации
 
 - 1: Ошибка в тесте _Invalid read array from JSON_ обычно расшифровывается немного ниже: читайте внимательно.
-- 2: <a href="https://urvanov.ru/2016/12/03/jackson-и-неизменяемые-объекты/">Jackson и неизменяемые объекты</a> (для
+- 2: <a href="https://urvanov.com/2016/12/03/jackson-и-неизменяемые-объекты/">Jackson и неизменяемые объекты</a> (для
   сериализации `MealTo`)
 - 3: Если у meal, приходящий в контроллер, поля `null`, проверьте `@RequestBody` перед параметром (данные приходят в
   формате JSON)
