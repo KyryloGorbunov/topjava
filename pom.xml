@@ -4,14 +4,14 @@
 
     <groupId>com.javawebinar</groupId>
     <artifactId>topjava</artifactId>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <version>1.0-SNAPSHOT</version>
 
-    <name>topjava</name>
+    <name>Calories Management</name>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.version>5.3.31</spring.version>
@@ -61,15 +61,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.4.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
