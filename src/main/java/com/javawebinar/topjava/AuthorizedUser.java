@@ -4,10 +4,8 @@ import com.javawebinar.topjava.model.User;
 import com.javawebinar.topjava.to.UserTo;
 import com.javawebinar.topjava.util.UsersUtil;
 
-import java.io.Serial;
-
 public class AuthorizedUser extends org.springframework.security.core.userdetails.User {
-    @Serial
+
     private static final long serialVersionUID = 1L;
 
     private UserTo userTo;
