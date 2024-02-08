@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:3.4.0-jdk-21 AS build
+FROM maven:3.3.0-jdk-21 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
