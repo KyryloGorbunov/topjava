@@ -8,7 +8,7 @@ RUN mvn clean package -DskipTests
 #
 # Package stage
 #
-FROM openjdk:21-jdk-slim
+FROM openjdk:11-jdk-slim
 COPY --from=build /target/topjava-1.0-SNAPSHOT.jar topjava.jar
 # ENV PORT=8080
 EXPOSE 8080
